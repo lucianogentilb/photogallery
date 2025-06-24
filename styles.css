@@ -120,7 +120,7 @@ main {
 	color: #ef4444;
 	text-align: center;
 }
-/* Ocultar elementos condicionalmente */
+/* Ocultar elementos condicionalmente (muito importante) */
 .hidden {
 	display: none !important;
 }

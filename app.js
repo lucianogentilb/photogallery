@@ -442,7 +442,7 @@ function init() {
   }
 }
 
-// Mostrar autorização
+// Mostrar autorização para acesso
 function showAuthScreen() {
   authSectionMain.classList.remove('hidden');
   galleryApp.classList.add('hidden');
