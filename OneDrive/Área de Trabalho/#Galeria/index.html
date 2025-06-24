@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="styles.css" rel="stylesheet" />
+		<title>Galeria de Fotos Black Horse</title>
+		<link rel="stylesheet" href="styles.css" />
+		<!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+		<!-- Google Material Icons -->
+		<link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet" />
+	</head>
+	<body>
+		<header>
+			<div class="logo">Galeria de Fotos</div>
+			<div id="auth-section" aria-live="polite"></div>
+		</header>
+		
+		<main>
+			<section id="auth-section-main" aria-label="User Authentication">
+				<form id="auth-form" novalidate>
+					<h2 id="auth-form-title">Acesso</h2>
+					<label for="username-input">Nome</label>
+					<input type="text" id="username-input" name="username" autocomplete="username" required />
+					<label for="password-input">Senha</label>
+					<input type="password" id="password-input" name="password" autocomplete="current-password" required minlength="8" />
+					<button type="submit" id="auth-submit-btn">Autenticar</button>
+					<div id="auth-switch" role="button" tabindex="0" aria-pressed="false" aria-label="Switch to register">Não tem uma conta? Cadastre-se</div>
+					<p id="auth-message" role="alert" aria-live="assertive"></p>
+				</form>
+			</section>
+			
+			<section id="gallery-app" class="hidden" aria-label="Photo gallery application">
+				<div id="upload-section" aria-label="Upload a new photo">
+					<h2>Carregar uma foto</h2>
+					<form id="upload-form" novalidate>
+						<label for="photo-title">Título da foto</label>
+						<input type="text" id="photo-title" maxlength="50" required />
+						<label for="photo-description">Descrição</label>
+						<textarea id="photo-description" rows="3" maxlength="150" placeholder="Opcional"></textarea>
+						<label for="photo-fileinput">Selecione a imagem</label>
+						<input type="file" id="photo-fileinput" accept="image/*" required />
+						<button type="submit">Carregar</button>
+					</form>
+				</div>
+				
+				<div id="search-section" aria-label="Search photos">
+					<input type="search" id="search-input" placeholder="Pesquise fotos por título ou remetente" aria-label="Pesquisar fotos" />
+					<button id="search-clear" aria-label="Limpar pesquisa">&times;</button>
+				</div>
+				
+				<section id="photo-gallery" aria-label="Galeria de fotos"></section>
+				
+				<div id="no-photos-msg" class="hidden">Nenhuma foto encontrada.</div>
+			</section>
+		</main>
+		
+		<footer>
+			<div class="container">
+				&copy; 2025 Galeria de Fotos Black Horse
+			</div>
+		</footer>
+		
+		<!-- App JS -->
+		<script src="app.js"></script>
+	</body>
+</html>
